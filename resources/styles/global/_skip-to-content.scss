@@ -1,0 +1,11 @@
+.skip-to-content {
+  display: block;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 100000;
+  &:focus {
+    top: 0.5rem;
+  }
+}

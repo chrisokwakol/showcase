@@ -1,0 +1,28 @@
+.media-grid {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 46px 34px;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .lgfb-video.lgfb-video--media-grid {
+      flex: 1 1 calc(50% - 34px);
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,41 @@
+.editor-notification {
+    --level-color: var(--theme--error-light);
+  
+    display: grid;
+    gap: 1rem 1.5rem;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    margin: 1rem auto;
+  
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--neutral--50);
+    border: 1px solid var(--level-color);
+    border-left-width: 10px;
+    box-shadow: map-get($shadows, 400);
+  
+    font-size: 1rem;
+  
+    &__icon {
+      color: var(--level-color);
+      font-size: 1.5rem;
+      position: relative;
+      top: 2px;
+    }
+  
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    &--warning {
+      --level-color: #f1c21c;
+    }
+    &--error {
+      --level-color: var(--theme--error);
+    }
+    &--success {
+      --level-color: var(--theme--success);
+    }
+  }
+  

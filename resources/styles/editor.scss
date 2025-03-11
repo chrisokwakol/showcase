@@ -1,0 +1,152 @@
+/**
+ * Define the styles that you want to bring into the editor here.
+**/
+
+// Node Modules Packages
+@import '~swiper/css';
+@import '~swiper/css/navigation';
+@import '~swiper/css/pagination';
+
+// Config
+@import 'functions';
+@import 'vars';
+
+@import 'vendor/rfs';
+@import 'vendor/gutenberg';
+
+// Mixins
+// @import 'mixins/breakpoints';
+@import 'mixins/breakpoints-container';
+@import 'mixins/buttons';
+@import 'mixins/colors';
+@import 'mixins/container';
+@import 'mixins/grid';
+@import 'mixins/theme';
+@import 'mixins/utilities';
+
+@import 'global/root';
+@import 'global/reset';
+@import 'global/colors';
+@import 'global/typography';
+@import 'global/utilities';
+@import 'global/icons';
+
+.editor-styles-wrapper {
+  @extend body;
+
+  // When the block is in edit mode.
+  .acf-block-fields {
+    margin-block-start: map-get($spacers, 4);
+  }
+
+  .edit-post-visual-editor__post-title-wrapper {
+    border-block-end: 1px solid #ddd;
+    padding-block-end: map-get($spacers, 4);
+    margin-block-start: map-get($spacers, 4) !important;
+    margin-block-end: map-get($spacers, 8) !important;
+  }
+
+  .wp-block-post-title {
+    @extend .container;
+    margin-block-end: 0;
+  }
+
+  // Global
+  @import 'global/typography';
+  @import 'global/colors';
+  @import 'global/utilities';
+  @import 'global/grid';
+}
+
+.edit-post-visual-editor {
+  margin: 0 auto;
+  border-inline: 1px solid #ddd;
+  width: calc(100% - 40px);
+}
+
+body.wp-admin
+  .edit-post-layout.is-sidebar-opened
+  .edit-post-plugin-sidebar__sidebar-layout,
+body.wp-admin .edit-post-layout.is-sidebar-opened .edit-post-sidebar,
+body.wp-admin .interface-navigable-region.interface-interface-skeleton__sidebar,
+body.wp-admin
+  .interface-navigable-region.interface-interface-skeleton__sidebar
+  > .interface-complementary-area__fill,
+body.wp-admin
+  .interface-navigable-region.interface-interface-skeleton__sidebar
+  > .interface-complementary-area__fill
+  .interface-complementary-area.editor-sidebar {
+  @media (min-width: 782px) {
+    width: 375px !important;
+  }
+  @media (min-width: 1280px) {
+    width: 425px !important;
+  }
+  @media (min-width: 1800px) {
+    width: 600px !important;
+  }
+}
+
+.edit-post-meta-boxes-area #poststuff .stuffbox > h3,
+.edit-post-meta-boxes-area #poststuff h2.hndle,
+.edit-post-meta-boxes-area #poststuff h3.hndle {
+  font-weight: 500;
+  font-size: 13px;
+  padding: 16px 48px 16px 16px;
+  color: #1e1e1e;
+}
+
+.acf-accordion .acf-accordion-title label {
+  font-family: var(--ff-ivyjournal);
+}
+
+.components-panel__body {
+  border-bottom: none;
+}
+
+// Utilities
+@import 'global/utilities';
+@import 'utilities/api';
+
+// Only add in components that you need to more tightly scope to the editor.
+.editor-styles-wrapper {
+  container-type: inline-size;
+  container-name: editor;
+
+  .acf-block-preview a:where(:not(.wp-element-button)) {
+    text-decoration: unset;
+  }
+
+  // Components
+  @import 'components/accordions';
+  @import 'components/buttons';
+  @import 'components/swiper';
+  @import 'components/social-share';
+  @import 'components/video';
+  @import 'components/modal';
+  @import 'components/editor-notification';
+
+  //Blocks
+  @import 'blocks/accordion';
+  @import 'blocks/benefits-columns';
+  @import 'blocks/stat-columns';
+  @import 'blocks/routing-cards';
+  @import 'blocks/testimonial-carousel';
+  @import 'blocks/pull-quote';
+  @import 'blocks/inline-form';
+  @import 'blocks/hero';
+  @import 'blocks/event-cards';
+  @import 'blocks/journey-strip';
+  @import 'blocks/table';
+  @import 'blocks/rich-text';
+  @import 'blocks/simple-hero';
+  @import 'blocks/lgfb-spacer';
+  @import 'blocks/button-grid';
+  @import 'blocks/cta-strip';
+  @import 'blocks/checklist-instructions';
+  @import 'blocks/numbered-instructions';
+  @import 'blocks/video-instructions';
+  @import 'blocks/media-grid';
+}
+
+// Issues when inside editor-styles-wrapper.

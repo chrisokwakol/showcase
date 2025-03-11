@@ -1,0 +1,34 @@
+.benefits-columns {
+    padding: 40px 0;
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 58px;
+
+        &__column {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 32px;
+    }
+
+    &__cta {
+        margin-top: 32px;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 64px 0;
+
+        &__grid {
+            flex-direction: row;
+            gap: 20px;
+    
+            &__column {
+                flex: 1;
+            }
+        }
+    }
+}

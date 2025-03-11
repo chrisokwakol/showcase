@@ -1,0 +1,64 @@
+@import '../-image-vars.scss';
+
+.pull-quote {
+  padding: 20px 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 40px 0;
+  }
+
+  &__inner {
+    &#pull-quote-full-width {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      @include media-breakpoint-up(md) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+
+      .wp-block-columns & {
+        flex-direction: column;
+
+        &__quote-icon {
+          height: 41px;
+        }
+      }
+
+      &__quote-icon {
+        display: inline-block;
+        flex-shrink: 0;
+        width: 41px;
+        height: auto;
+        background-image: $pull-quote-icon;
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+
+        @include media-breakpoint-up(md) {
+          width: 52px;
+          height: auto;
+        }
+      }
+
+      &__quote-content {
+        color: var(--theme--onyx);
+
+        .author-name {
+          margin-bottom: 6px;
+        }
+
+        .author-info {
+          line-height: 27px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

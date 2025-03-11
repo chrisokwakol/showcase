@@ -1,0 +1,121 @@
+{
+    "key": "group_67652d629cf4b",
+    "title": "Block - Table",
+    "fields": [
+        {
+            "key": "field_67652d63dc692",
+            "label": "Table",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_67653087ab853",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_677fbd2df11b7",
+            "label": "Title",
+            "name": "lgfb_table-title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_677fbd41f11b8",
+            "label": "Description",
+            "name": "lgfb_table-text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_676532fa8bf31",
+            "label": "Table",
+            "name": "lgfb_table-table",
+            "aria-label": "",
+            "type": "table",
+            "instructions": "PLEASE NOTE: To add an icon to the header use the <i> HTML tag followed by the text. For example &lt;i class=\"fa-regular fa-clock\"&gt;&lt;\/i&gt; Clock.\r\n\r\nThe class (e.g., fa-regular fa-clock) is what displays the icon. You can find the appropriate class by visiting https:\/\/fontawesome.com\/search, searching for the icon, and copying the full HTML code provided.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "use_header": 1,
+            "use_caption": 2,
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/l-g-f-b-table"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1739253946
+}

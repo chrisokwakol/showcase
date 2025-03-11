@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "background": {
+      "backgroundImage": false
+    },
+    "color": {
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "gray",
+          "color": "#f3f3f3",
+          "name": "Gray"
+        }
+      ]
+    },
+    "custom": {},
+    "spacing": {
+      "padding": false
+    },
+    "typography": {
+      "fontSizes": [],
+      "customFontSize": false,
+      "dropCap": false,
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": false,
+      "lineHeight": false,
+      "textColumns": false,
+      "textDecoration": true,
+      "textTransform": true,
+      "writingMode": false
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.accordion-block {
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
+
+  .lgfb-accordion {
+    padding-bottom: 20px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    &:not(:first-child) {
+      padding-top: 20px;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      .lgfb-accordion__toggle {
+        text-decoration: underline;
+        text-decoration-color: var(--theme--onyx);
+      }
+    }
+
+    &__toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+      text-align: left;
+
+      .toggle__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--theme--hibiscus);
+        padding: 14px 8px 14px 0;
+        margin-bottom: 0;
+        font-family: var(--ff-open-sans);
+
+        @include media-breakpoint-up(md) {
+          font-family: var(--ff-poppins);
+          padding: 14px 16px 14px 16px;
+          font-size: 21px;
+          font-weight: 500;
+          line-height: 26.04px;
+        }
+      }
+
+      .toggle__icon {
+        color: var(--theme--hibiscus);
+        font-size: 24px;
+
+        @include media-breakpoint-up(md) {
+          font-size: 34px;
+        }
+      }
+    }
+
+    &__content {
+      @include media-breakpoint-up(md) {
+        padding-left: 16px;
+      }
+
+      &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        max-width: 1165px;
+
+        @include media-breakpoint-up(md) {
+          flex-direction: row;
+        }
+
+        &__text {
+          flex: 1;
+
+          @include media-breakpoint-up(md) {
+            flex: 0 1 95%;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 23.04px;
+          }
+        }
+
+        &__image {
+          object-fit: cover;
+          object-position: center;
+          height: 307px;
+          width: auto;
+          border-radius: 12px;
+
+          @include media-breakpoint-up(md) {
+            flex: 0 1 277px;
+            height: 173px;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}

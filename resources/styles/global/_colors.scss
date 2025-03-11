@@ -1,0 +1,47 @@
+// Backgrounds!
+@include make-background-colors($neutral, 'neutral--');
+@include make-background-colors($theme, 'theme--');
+// @include make-background-colors($emerson, 'emerson--');
+
+// Fills
+@include make-fill-colors($neutral, 'neutral--');
+@include make-fill-colors($theme, 'theme--');
+
+// Text!
+@include make-text-colors($neutral, 'neutral--');
+@include make-text-colors($theme, 'theme--');
+// @include make-text-colors($emerson, 'emerson--');
+
+// If the background is dark, then use white for the text
+.bg-dark,
+.text-light {
+  color: var(--neutral--100);
+  a,
+  button,
+  span,
+  p {
+    color: var(--neutral--100) !important;
+  }
+}
+
+// If the background is light, then use black for the text
+.bg-light,
+.text-dark {
+  color: var(--neutral--900);
+  a,
+  button,
+  span,
+  p {
+    color: var(--neutral--900) !important;
+  }
+}
+
+.fill-none {
+  fill: none;
+}
+
+body:not(.wp-admin) ::selection {
+  // background-color: var(--emerson--green-light);
+  // -webkit-text-fill-color: var(--neutral--900) !important;
+  // color: var(--neutral--900) !important;
+}

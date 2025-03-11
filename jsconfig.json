@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "@roots/bud/config/jsconfig.json",
+    "@roots/sage/config/jsconfig.json"
+  ],
+  "compilerOptions": {
+    "baseUrl": "resources",
+    /**
+     * Resolve aliases
+     */
+    "paths": {
+      "@fonts/*": ["fonts/*"],
+      "@images/*": ["images/*"],
+      "@scripts/*": ["scripts/*"],
+      "@styles/*": ["styles/*"],
+      "@sageReact/*": ["react/*"],
+      "@reactComponent/*": ["react/components/*"]
+    },
+    /**
+     * Type definitions
+     */
+    "types": [
+      "@roots/bud",
+      "@roots/bud-babel",
+      "@roots/bud-react",
+      "@roots/bud-postcss",
+      "@roots/bud-preset-recommend",
+      "@roots/bud-preset-wordpress",
+      "@roots/bud-wordpress-theme-json",
+      "@roots/sage"
+    ]
+  },
+  "files": ["bud.config.js"],
+  "include": ["resources",
+    "resources/scripts/react"
+  ],
+  "exclude": ["node_modules", "public"]
+}

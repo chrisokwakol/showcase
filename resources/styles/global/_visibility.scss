@@ -1,0 +1,33 @@
+.show-for-desktop {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.show-for-mobile {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.hide-for-small-only {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+
+.hide-for-medium-only {
+  @include media-breakpoint-between(sm, lg) {
+    display: none !important;
+  }
+}
+
+.hide-for-large-only {
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+}

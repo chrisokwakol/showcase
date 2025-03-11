@@ -1,0 +1,58 @@
+{
+  "name": "sage",
+  "private": true,
+  "browserslist": [
+    "extends @roots/browserslist-config"
+  ],
+  "engines": {
+    "node": ">=20.6.1"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "bud dev",
+    "build": "bud build",
+    "translate": "npm run translate:pot && npm run translate:update",
+    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"theme.json,patterns,app,resources\"",
+    "translate:update": "for file in ./resources/lang/*.po; do wp i18n update-po ./resources/lang/sage.pot $file; done",
+    "translate:compile": "npm run translate:mo && npm run translate:js",
+    "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
+    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang",
+    "lint": "yarn lint:js && yarn lint:css",
+    "lint:js": "eslint resources/scripts",
+    "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
+    "test": "yarn lint"
+  },
+  "devDependencies": {
+    "@roots/bud": "^6.23.3",
+    "@roots/bud-babel": "^6.23.3",
+    "@roots/bud-eslint": "^6.23.3",
+    "@roots/bud-framework": "^6.23.3",
+    "@roots/bud-postcss": "^6.23.3",
+    "@roots/bud-preset-wordpress": "^6.23.3",
+    "@roots/bud-prettier": "^6.23.3",
+    "@roots/bud-react": "^6.23.3",
+    "@roots/bud-sass": "^6.23.3",
+    "@roots/eslint-config": "^6.23.3",
+    "@roots/sage": "^6.23.3",
+    "@types/react": "^18.2.79",
+    "@wordpress/block-editor": "^14.6.0",
+    "jsdoc": "^4.0.4"
+  },
+  "packageManager": "yarn@4.1.0",
+  "volta": {
+    "node": "20.11.1"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.26.22",
+    "@react-google-maps/api": "^2.19.3",
+    "@wordpress/data": "^10.0.0",
+    "clsx": "^2.1.0",
+    "debounce": "^2.1.0",
+    "dompurify": "^3.1.6",
+    "focus-trap": "^7.5.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.2",
+    "swiper": "^11.1.4"
+  }
+}

@@ -1,0 +1,51 @@
+{
+    "key": "group_67b2dcf454e77",
+    "title": "Page - Blog Detail",
+    "fields": [
+        {
+            "key": "field_67b2dcf47b081",
+            "label": "Blog Detail Main Topic",
+            "name": "blog_detail_main_topic",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Important: Please ensure you also select this Main Topic in the taxonomy area to maintain consistency across the site.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "topic",
+            "add_term": 1,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "select",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1740401079
+}

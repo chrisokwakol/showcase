@@ -1,0 +1,19 @@
+body,
+:root {
+  --wp--preset--font-size--small: 14px !important;
+  --wp--preset--font-size--medium: 18px !important;
+  --wp--preset--font-size--large: 36px !important;
+  --wp--preset--font-size--x-large: 42px !important;
+  --wp--preset--spacing--20: #{map-get($spacers, 2)} !important;
+  --wp--preset--spacing--30: #{map-get($spacers, 4)} !important;
+  --wp--preset--spacing--40: #{map-get($spacers, 8)} !important;
+  --wp--preset--spacing--50: #{map-get($spacers, 16)} !important;
+  --wp--preset--spacing--60: #{map-get($spacers, 20)} !important;
+  --wp--preset--spacing--70: #{map-get($spacers, 24)} !important;
+  --wp--preset--spacing--80: #{map-get($spacers, 28)} !important;
+}
+
+.wp-block-post-featured-image {
+  border-radius: map-get($spacers, 3);
+  overflow: hidden;
+}

@@ -1,0 +1,28 @@
+:root,
+body {
+  // ====================== FONTS ======================
+  //font family
+  --ff-poppins: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --ff-open-sans: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --ff-nunito: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  // Standard margin below paragraphs
+  --p-margin: 2rem;
+
+  // JS Overides these
+  --header-height: 130px;
+  --loading-height: 20vh;
+
+  // ====================== Colors ======================
+
+  // Global
+  @include make-theme-root-variables($neutral, 'neutral--');
+  @include make-theme-root-variables($theme, 'theme--');
+  // @include make-theme-root-variables($emerson, 'emerson--');
+}

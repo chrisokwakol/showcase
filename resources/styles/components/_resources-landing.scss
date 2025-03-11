@@ -1,0 +1,112 @@
+.resources-landing {
+  &__list {
+    background-color: white;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 40px;
+      padding-bottom: 50px;
+      background-color: #f4f5f4;
+    }
+
+    &__title {
+      color: var(--theme--onyx);
+
+      @include media-breakpoint-down(md) {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 25px;
+
+      @include media-breakpoint-down(md) {
+        gap: 16px;
+      }
+
+      &__item {
+        flex: 0 0 396px;
+        box-shadow: 0px 8px 17px 0px #0000000a;
+        transition: box-shadow 0.3s ease;
+        display: flex;
+        align-items: center;
+        // min-width: 396px;
+        max-height: 95px;
+        border-radius: 0 20px 20px 0;
+
+        @media screen and (max-width: 1277px) {
+          flex: 0 1 calc(50% - 15px);
+        }
+
+        @include media-breakpoint-down(lg-alt) {
+          flex: 0 0 calc(50% - 15px);
+        }
+
+        @include media-breakpoint-down(md) {
+          display: none;
+          min-width: 296px;
+        }
+
+        @include media-breakpoint-up(md) {
+          min-width: 296px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          min-width: 396px;
+        }
+
+        &--mobile {
+          display: block;
+          min-width: unset;
+          flex: 1 1 100%;
+
+          @include media-breakpoint-up(md) {
+            display: none;
+          }
+        }
+
+        .btn-lgfb {
+          justify-content: space-between;
+        }
+
+        &:hover {
+          text-decoration-color: var(--theme--hibiscus);
+          box-shadow: 0px 8px 17px 0px #0000001a;
+          border-radius: 20px;
+        }
+
+        .resource-item__image {
+          max-width: 146px;
+          max-height: 95px;
+
+          img {
+            border-radius: 20px 0px 0px 20px;
+            height: 95px;
+            width: 146px;
+            object-fit: cover;
+          }
+        }
+
+        .resource-item__title {
+          color: var(--theme--hibiscus);
+          max-width: 200px;
+        }
+
+        .resource-item__text {
+          height: 100%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          flex: 1;
+          padding-left: 18px;
+          padding-right: 18px;
+          border-radius: 0 20px 20px 0;
+        }
+      }
+    }
+  }
+}

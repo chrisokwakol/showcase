@@ -1,0 +1,29 @@
+// Backgrounds!
+@mixin make-background-colors($theme, $infix, $includeColor: true) {
+  @each $key, $var in $theme {
+    .bg-#{$infix}#{$key} {
+      background: var(--#{$infix}#{$key});
+
+      @if ($includeColor) {
+        color: color-contrast($var);
+      }
+    }
+  }
+}
+
+@mixin make-fill-colors($theme, $infix, $includeColor: true) {
+  @each $key, $var in $theme {
+    .fill-#{$infix}#{$key} {
+      fill: var(--#{$infix}#{$key});
+    }
+  }
+}
+
+// Text
+@mixin make-text-colors($theme, $infix) {
+  @each $key, $var in $theme {
+    .text-#{$infix}#{$key} {
+      color: var(--#{$infix}#{$key});
+    }
+  }
+}

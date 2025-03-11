@@ -1,0 +1,34 @@
+html,
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.container {
+  @include make-container(20px);
+
+  @include media-breakpoint-up(md) {
+    @include make-container(20px);
+  }
+
+  &.is-style-wide {
+    max-width: unset;
+  }
+
+  &.is-style-narrow {
+    max-width: 1000px;
+  }
+}
+
+.wp-block-group,
+.wp-block-columns {
+  @extend .container;
+
+  &.is-style-wide {
+    max-width: unset;
+  }
+
+  &.is-style-narrow {
+    max-width: 880px;
+  }
+}

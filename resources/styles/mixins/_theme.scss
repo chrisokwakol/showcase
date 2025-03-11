@@ -1,0 +1,18 @@
+/**
+ * make-theme-root-variables()
+ *
+ * Adds the proper CSS to :root
+ * This is only to be run on the defaults!
+ *
+ * $theme: array of which theme to use.
+ * $infix: string of the identifier.  IE: btn-black.
+ *
+**/
+
+@mixin make-theme-root-variables($theme, $infix) {
+  // Loop over theme
+  @each $key, $var in $theme {
+    // set each key as a var with it's value.
+    --#{$infix}#{$key}: #{$var};
+  }
+}

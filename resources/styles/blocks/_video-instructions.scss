@@ -1,0 +1,208 @@
+.video-instructions {
+  background-color: var(--theme--hibiscus-light);
+
+  &__container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__inner {
+    margin-bottom: 48px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 24px;
+    }
+
+    .video-instructions__title {
+      color: var(--theme--onyx);
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .video-instructions__intro {
+      max-width: 976px;
+      color: var(--theme--onyx);
+      line-height: 19.2px;
+    }
+  }
+
+  &__content {
+    &__top,
+    &__bottom {
+      .lgfb-video {
+        padding: 0;
+
+        &--video-instructions {
+          .lgfb-video__content {
+            &.media-text-row-img {
+              pointer-events: none;
+            }
+
+            display: flex;
+            gap: 64px;
+
+            @include media-breakpoint-down(md) {
+              flex-direction: column;
+              gap: 20px;
+              padding-top: 4px;
+              padding-bottom: 4px;
+            }
+
+            .video-instructions-list-container {
+              flex: 1 1 50%;
+              padding: 39px 0;
+
+              @include media-breakpoint-down(md) {
+                padding: 0;
+              }
+
+              .video-instructions-list-title {
+                color: var(--theme--onyx);
+                font-size: 26px;
+                margin-bottom: 32px;
+              }
+
+              .video-instructions-list ul {
+                padding-left: 16px;
+                margin-bottom: 32px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                @include media-breakpoint-down(md) {
+                  margin-bottom: 20px;
+                }
+
+                li {
+                  color: var(--theme--onyx);
+                  line-height: 23.04px;
+                  padding-left: 10px;
+                  font-size: 16px;
+
+                  &::marker {
+                    color: var(--theme--hibiscus);
+                  }
+                }
+              }
+            }
+
+            .lgfb-video__poster-container {
+              flex: 1 1 50%;
+              position: relative;
+
+              @include media-breakpoint-down(sm) {
+                // max-height: 215px;
+              }
+
+              .lgfb-video__code {
+                // max-width: 600px;
+                max-height: 378px;
+
+                @include media-breakpoint-down(md) {
+                  width: 100%;
+                }
+
+                @include media-breakpoint-down(sm) {
+                  max-height: 215px;
+                }
+              }
+
+              .lgfb-video__poster {
+                > img {
+                  height: 100%;
+                  object-fit: cover;
+
+                  @include media-breakpoint-down(md) {
+                    max-height: 378px;
+                  }
+
+                  @include media-breakpoint-down(sm) {
+                    max-height: 215px;
+                  }
+                }
+
+                @include media-breakpoint-down(md) {
+                  height: 100%;
+                }
+
+                @include media-breakpoint-up(md) {
+                  // max-width: 600px;
+                  max-height: 378px;
+                  height: 100%;
+                }
+
+                .lgfb-video__transcript {
+                  .transcript__toggle {
+                    margin-top: 6px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__top {
+      .lgfb-video--video-instructions:nth-child(even) {
+        .lgfb-video__content {
+          flex-direction: row-reverse;
+
+          @include media-breakpoint-down(md) {
+            flex-direction: column;
+          }
+        }
+      }
+
+      .lgfb-video {
+        &--video-instructions {
+          &:not(:last-child) {
+            margin-bottom: 60px;
+          }
+
+          @include media-breakpoint-down(md) {
+            &:not(:last-child) {
+              margin-bottom: 24px;
+            }
+          }
+
+          .lgfb-video__content {
+            .video-instructions-list-container {
+              .video-instructions-list-title {
+                color: var(--theme--onyx);
+                font-size: 26px;
+                margin-bottom: 42px;
+              }
+            }
+
+            .lgfb-video__poster {
+              flex: 1 1 50%;
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      .lgfb-video {
+        &--video-instructions {
+          .lgfb-video__content {
+            flex-direction: row-reverse;
+
+            @include media-breakpoint-down(md) {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}

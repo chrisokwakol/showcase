@@ -1,0 +1,303 @@
+// Default typography styles
+
+html {
+  font-size: 16px;
+  line-height: 144%;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--ff-poppins);
+  font-weight: 400;
+  line-height: 125%;
+  margin-block-end: 24px;
+}
+
+.pull-quote-header {
+  font-size: 26px;
+  line-height: 27px;
+  color: var(--theme--onyx);
+}
+
+//Typography size controls
+h1,
+.h1 {
+  font-size: 32px;
+  line-height: 136%;
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+    line-height: 104%;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 28px;
+  line-height: 34.72px;
+  @include media-breakpoint-up(md) {
+    font-size: 38px;
+    line-height: 47.12px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+  line-height: 124%;
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+    line-height: 124%;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+  line-height: 214%;
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+    line-height: 214%;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 16px;
+  line-height: 214%;
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+    line-height: 214%;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 16px;
+  line-height: 124%;
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    line-height: 124%;
+  }
+}
+
+.fs-xs {
+  font-size: 12px;
+  line-height: 124%;
+}
+
+.fs-sm {
+  font-size: 14px;
+  line-height: 124%;
+}
+
+.fs-base {
+  font-size: 16px;
+  line-height: 144%;
+}
+
+.fs-lg {
+  font-size: 18px;
+  line-height: 124%;
+}
+
+.fs-xl {
+  font-size: 20px;
+  line-height: 124%;
+}
+
+.fs-2xl {
+  font-size: 24px;
+  line-height: 124%;
+}
+
+.fs-3xl {
+  font-size: 28px;
+  line-height: 124%;
+}
+
+.fs-4xl {
+  font-size: 36px;
+  line-height: 124%;
+}
+
+.fs-5xl {
+  font-size: 48px;
+  line-height: 124%;
+}
+
+.fs-6xl {
+  font-size: 60px;
+  line-height: 124%;
+}
+
+.fs-7xl {
+  font-size: 68px;
+  line-height: 124%;
+}
+
+.fs-8xl {
+  font-size: 80px;
+  line-height: 124%;
+}
+
+.fs-9xl {
+  font-size: 92px;
+  line-height: 124%;
+}
+
+p {
+  font-family: var(--ff-open-sans);
+  margin-bottom: 1.25rem;
+  font-size: 16px;
+  line-height: 23.04px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.light {
+  font-weight: 400;
+}
+
+.light-medium {
+  font-weight: 500;
+}
+
+.medium {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+}
+
+b,
+strong {
+  font-variation-settings: 'wght' 700;
+}
+
+ul {
+  li::marker {
+    color: var(--emerson--emerald-green-dark);
+  }
+}
+
+span {
+  font-family: var(--ff-open-sans);
+}
+
+.h-underline,
+.is-style-underline {
+  padding-bottom: map-get($spacers, 6);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 140px;
+    border-radius: 5px;
+    height: 3px;
+    background: var(--emerson--emerald-green);
+  }
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.muted,
+.text-muted {
+  color: var(--dark-grey);
+}
+
+a,
+button {
+  // &[target='_blank']:not(.hide-external-icon, .components-button):after {
+  //   content: '\f35d';
+  //   position: relative;
+  //   margin-inline-start: 0.5rem;
+  //   top: -2px;
+  //   font-family: 'Font Awesome 6 Pro';
+  //   font-weight: inherit; // 500
+  //   -webkit-font-smoothing: antialiased;
+  //   display: inline-block;
+  //   font-style: normal;
+  //   font-variant: normal;
+  //   text-rendering: auto;
+  //   line-height: inherit;
+  //   font-size: 0.75em;
+  //   vertical-align: baseline;
+  // }
+
+  &.emerson--link {
+    color: var(--emerson--links, #004b85);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 155%; /* 1.74375rem */
+    text-decoration: underline;
+    font-variation-settings: 'wght' 700;
+  }
+}
+
+.hide-external-icon {
+  a,
+  button {
+    &:after {
+      display: none !important;
+    }
+  }
+}
+
+main {
+  ul,
+  ol {
+    padding-inline-start: map-get($spacers, 8);
+    margin-block-end: map-get($spacers, 5);
+    p {
+      margin-block-end: 0;
+    }
+    ul,
+    ol {
+      margin-block-end: 0;
+    }
+    li {
+      margin-block-start: map-get($spacers, 4);
+    }
+  }
+
+  a:not(.btn-*) {
+    text-decoration: underline;
+    color: var(--neutral-50);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a.reverse {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

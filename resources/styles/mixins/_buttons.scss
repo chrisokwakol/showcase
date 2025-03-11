@@ -1,0 +1,20 @@
+// Buttons
+@mixin make-button-colors($theme, $infix) {
+  @each $key, $var in $theme {
+    // Filled version
+    .btn-#{$infix}#{$key} {
+      background-color: var(--#{$infix}#{$key});
+      color: color-contrast($var);
+    }
+    // Outline Version
+    .btn-#{$infix}#{$key}-outline {
+      border-color: var(--#{$infix}#{$key});
+      color: var(--#{$infix}#{$key});
+    }
+
+    // Ghost Version
+    .btn-#{$infix}#{$key}-ghost {
+      color: var(--#{$infix}#{$key});
+    }
+  }
+}
